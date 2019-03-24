@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>PROJECT</title>
+  <style>
+      p{
+          font:20px "Arial",san-serif;
+      } 
+      
+      ol{
+          font:25px "Arial",san-serif;
+      }
+      
+      select{
+          width:150px;
+          height:30x;
+      }
+       
+  </style>
+    
+
+    </head>
+  <body>
+      <center><h1>IMDB SCRAPPING</h1></center>
+   <form method="POST">
+    <div>
+        <p><font color="red">Select a genre to display top 5 movies</font></p>
+      <select name="genre" id="gen">
+         <option name="action" value="action">Action</option>
+         <option name="comedy" value="comedy">Comedy</option>
+         <option name="horror" value="horror">Horror</option>
+         <option name="romance" value="romance">Romance</option>
+         <option name="thriller" value="thriller">Thriller</option>
+         <option name="sci-fi" value="sci-fi">Sci-Fi</option>
+         <option name="animation" value="animation">Animation</option>
+         <option name="mystery" value="mystery">Mystery</option>
+         <option name="psy-thriller" value="psy-thriller">Psychological Thriller</option>
+       </select>
+        &nbsp;
+        &nbsp;
+        <button type="submit" value="Display" onclick="display()">Display</button>
+    </div>
+    </form>
+    <br>
+    <br>
+      
+    <ol type="1">
+      {% for i in mov %}
+        <li>{{i}}</li>
+      {% endfor %}
+      </ol>
+    </body>
+</html>
+    
+  
